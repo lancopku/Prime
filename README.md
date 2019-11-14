@@ -1,7 +1,8 @@
 # Introduction
 Code is based on Fairseq 0.6.2, and readme is adapted from the origin readme.
-- **parallel multi-scale attention(MUSE)(MUSE)**
-  - [Zhao et al. (2019): MUSE: Multi-Scale Attention Model for Sequence to Sequence Learning ](examples/parallel_multi-scale_attention(MUSE)/README.md)
+- **parallel multi-scale attention(MUSE)**
+  - Code for [Zhao et al. (2019): MUSE: Multi-Scale Attention Model for Sequence to Sequence Learning ](https://openreview.net/pdf?id=SJe-3REFwr)
+  - [Pre-trained models as well as instructions](examples/parallel_multi-scale_attention(MUSE)/README.md) on how to train new models
 
 MUSE features:
 - Parallel learn multi-scale sequence representations
