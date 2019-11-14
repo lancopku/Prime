@@ -26,7 +26,7 @@ pip install --editable . --user
 # Pre-trained models and examples
 
 We provide pre-trained models and detailed example training and
-evaluation in examples/parallel_multi-scale_attention(MUSE)/README.md.
+evaluation in [examples/parallel_multi-scale_attention(MUSE)/README.md](examples/parallel_multi-scale_attention(MUSE)/README.md).
 
 # Results
 | Task | size  | test (BLEU) |
