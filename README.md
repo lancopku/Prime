@@ -6,8 +6,9 @@ Code is based on Fairseq 0.6.2, and readme is adapted from the origin readme.
 
 MUSE features:
 - Parallel learn multi-scale sequence representations
-- First successfully combine convolution and self-attn in one module for sequence tasks by shared projection
+- First successfully combine convolution and self-attn in one module for sequence tasks by the proposed shared projection
 - SOTA on three Main translation datasets, WMT14, En-Fr,En-De and IWSLT14 De-En
+- Potential for acceleration
 
 
 # Requirements and Installation
