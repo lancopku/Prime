@@ -50,9 +50,9 @@ class TransformerCombineEncoder(FairseqEncoder):
 
         self.layers = nn.ModuleList([])
         self.out_linear = None
-        self.reslayer = args.reslayer
-        if args.reslayer == 'combine':
-            self.layers.extend([
+#         self.reslayer = args.reslayer
+#         if args.reslayer == 'combine':
+        self.layers.extend([
                 TransformerCombineEncoderLayer(layer_id=i, args=args)
                 for i in range(args.encoder_layers)
             ])
