@@ -104,8 +104,8 @@ class MultiheadAttention820(nn.Module):
                     in_ratio = 2
                 else:
                     in_ratio = len(self.k_list)+1
-        if cur_attn_type in ['es', 'ds']:
-            in_ratio += 1
+#         if cur_attn_type in ['es', 'ds']:
+#             in_ratio += 1
         self.out_proj = nn.Linear(in_ratio * embed_dim, embed_dim, bias=bias)
         self.reset_parameters()
         self.onnx_trace = False
