@@ -184,6 +184,7 @@ inner_dim=$((2*$dim))
 attn_dynamic_cat=1
 attn_dynamic_type=2
 kernel_size=0
+seed=0
 cur_save=${save}
 python3 train.py data-bin/iwslt14.tokenized.de-en -a transformer_iwslt_de_en --optimizer adam --lr 0.001 -s de -t en --label-smoothing 0.1 --dropout 0.4 --max-tokens 4000 \
       --min-lr '1e-09' --lr-scheduler inverse_sqrt --weight-decay 0.0001 \
