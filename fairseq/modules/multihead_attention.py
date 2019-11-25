@@ -214,7 +214,7 @@ class MultiheadAttention820(nn.Module):
         if v is not None:
             v = v.contiguous().view(-1, bsz * self.num_heads, self.head_dim).transpose(0, 1)
         # print('attn_cat_relu %d |len dynamics size %d| tgt_len %d' % (self.attn_cat_relu, len(self.dynamics), tgt_len))
-        if len(self.dynamics) > 0 or (self.attn_cat_relu and self.cur_attn_type in ['es','ds']):  # added in 9/11
+        if len(self.dynamics) > 0 :  # added in 9/11
             dynamic_x = v  # bsz*heads tgt_len head_dim
         else:
             dynamic_x = None
