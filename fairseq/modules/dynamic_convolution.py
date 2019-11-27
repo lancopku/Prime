@@ -183,25 +183,6 @@ class DynamicConv1dTBC(nn.Module):
 
         if not self.renorm_padding:
             if self.weight_softmax:
-                if self.div:
-                    div = self.div
-                    lb= self.lb
-                    if div > 0:
-                        top_k = int(torch.ceil(torch.Tensor([T / div])))
-                        if top_k < lb:
-                            top_k = lb
-                            if top_k > T:
-                                top_k = T
-                    else:
-                        top_k = -div
-                        if top_k > T:
-                            top_k = T
-                    if top_k > K:
-                        top_k = K
-                    vk, _ = torch.topk(weight, top_k)
-                    tk = vk[:, -1].unsqueeze(1).expand_as(weight)
-                    mask_k = torch.lt(weight, tk)
-                    weight = weight.masked_fill(mask_k, float('-inf')).type_as(weight)
                 weight = F.softmax(weight, dim=1)
             weight = F.dropout(weight, self.weight_dropout, training=self.training, inplace=False)
         weight = weight.narrow(1, 0, K).contiguous()
