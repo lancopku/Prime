@@ -46,12 +46,10 @@ We also provide an additional patent grant.
 Please cite as:
 
 ```bibtex
-@misc{zhao2019muse,
-    title={MUSE: Parallel Multi-Scale Attention for Sequence to Sequence Learning},
-    author={Guangxiang Zhao and Xu Sun and Jingjing Xu and Zhiyuan Zhang and Liangchen Luo},
-    year={2019},
-    eprint={1911.09483},
-    archivePrefix={arXiv},
-    primaryClass={cs.CL}
+@article{zhao2019muse,
+  title={MUSE: Parallel Multi-Scale Attention for Sequence to Sequence Learning},
+  author={Zhao, Guangxiang and Sun, Xu and Xu, Jingjing and Zhang, Zhiyuan and Luo, Liangchen},
+  journal={arXiv preprint arXiv:1911.09483},
+  year={2019}
 }
 ```
