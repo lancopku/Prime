@@ -73,4 +73,4 @@ Please cite as:
 
 # Notes
 The code is based on fairseq-0.6.2,
-the main code can be seen in fairseq\models\combine_transformer.py and fairseq\models\transformer_bm.py(means big matrix, code for acceleration), fairseq\modules\multihead_attention.py(code for combining convolution and self-attention)
+the main code can be seen in fairseq\models\combine_transformer.py(code for parallel representation learning) and fairseq\models\transformer_bm.py(means big matrix, code for acceleration), fairseq\modules\multihead_attention.py(code for combining convolution and self-attention)
