@@ -6,7 +6,7 @@
  - [Pre-trained models as well as instructions for training](examples/parallel_multi-scale_attention(MUSE)/README.md) :examples/parallel_multi-scale_attention(MUSE)/README.md
  - [Reddit post link](https://www.reddit.com/r/MachineLearning/comments/e13qhb/r_a_simple_module_consistently_outperforms/)
 
-**About the paper:**:
+**About the paper:**
 
 TL;DR: A simple module consistently outperforms self-attention and Transformer model on main NMT datasets with SoTA performance.
 
