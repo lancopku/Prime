@@ -4,10 +4,10 @@ import math
 
 def Linear(in_features, out_features, layer_id=0, args=None, cur_linear=None, bias=True, ):
     m = nn.Linear(in_features, out_features, bias)
-    init_method = args.init_method if 'init_method' in args else 'xavier'
     if args is None:
         nn.init.xavier_uniform_(m.weight)
     else:
+        init_method = args.init_method if 'init_method' in args else 'xavier'
         if init_method == 'xavier':
             nn.init.xavier_uniform_(m.weight)
         elif init_method == 'fixup':
