@@ -1,0 +1,711 @@
+| distributed init (rank 0): tcp://localhost:14342
+| distributed init (rank 1): tcp://localhost:14342
+| initialized host lanco13 as rank 1
+| distributed init (rank 5): tcp://localhost:14342
+| initialized host lanco13 as rank 5
+| distributed init (rank 7): tcp://localhost:14342
+| initialized host lanco13 as rank 7
+| distributed init (rank 6): tcp://localhost:14342
+| initialized host lanco13 as rank 6
+| distributed init (rank 2): tcp://localhost:14342
+| initialized host lanco13 as rank 2
+| distributed init (rank 3): tcp://localhost:14342
+| distributed init (rank 4): tcp://localhost:14342
+| initialized host lanco13 as rank 3
+| initialized host lanco13 as rank 4
+| initialized host lanco13 as rank 0
+Namespace(activation_dropout=0.0, activation_fn='relu', adam_betas='(0.9, 0.98)', adam_eps=1e-08, adanorm_scale=2.0, adaptive_input=False, adaptive_softmax_cutoff=None, adaptive_softmax_dropout=0, arch='transformer_vaswani_wmt_en_fr_big', att_relu=0, attention_dropout=0.1, attn1='origin', attn2='none', attn_a=1, attn_cat_relu=0, attn_dynamic_cat=1, attn_dynamic_indie_v=0, attn_dynamic_type=2, attn_ratio=1, attn_wide_kernels=[3, 15], bagging_num=1, big_km=1, big_km_list=['attn_out'], bm=0, bm_fc3=0, bm_fc4=0, bm_ffn_norm=0, bm_in_a=5, bm_norm=0, bm_out_a=5, bucket_cap_mb=25, bypass_ffn=0, cache_block_valia_attn=0, cache_norms=0, cache_residual=0, cache_size=3, caches_cat=0, caches_dense=0, cd_dropout=0, clip_norm=0.0, cmb_2hffn=0, cmb_gate=0, cmb_gate_avgpos=0, cmb_gate_nonlinear=0, cmb_mode='add', combine=1, combine_linear=0, conv2='ffn', conv3='none', conv_in_glu=0, cpu=False, criterion='label_smoothed_cross_entropy', curriculum=0, data='data-bin/wmt14_en_fr', dataset_impl='cached', dc_relu=0, dcb_relu=0, ddp_backend='no_c10d', dec_il_dropout=0, dec_il_list=['self_mha', 'context_mha', 'ffn'], dec_info_linear=0, dec_nffn=0, dec_ratio=0, dec_tanh_list=[], decoder_attention_heads=16, decoder_embed_dim=768, decoder_embed_path=None, decoder_ffn_embed_dim=3072, decoder_final_norm=False, decoder_input_dim=768, decoder_layers=12, decoder_learned_pos=False, decoder_normalize_before=False, decoder_output_dim=768, dense_activate=0, dense_dropout=0, device_id=0, dim_group_size=32, disable_validation=False, distributed_backend='nccl', distributed_init_method='tcp://localhost:14342', distributed_no_spawn=False, distributed_port=-1, distributed_rank=0, distributed_world_size=8, div=0, dropout=0.1, ds=0, ds_dim=0, ds_ds=0, ds_heads=1, ds_k=0, dynamic_gate=1, dynamic_inner_dim_ratio=2, dynamic_padding=0, enc_il_dropout=0, enc_il_inc=0, enc_ratio=0, enc_tanh_list=[], encoder_attention_heads=16, encoder_embed_dim=768, encoder_embed_path=None, encoder_ffn_embed_dim=3072, encoder_layers=12, encoder_learned_pos=False, encoder_normalize_before=False, f_fc_layers=1, f_ln=0, fc1_a=5, fc2_a=5, ffn='ffn', ffn_nr=0, fix_batches_to_gpus=False, fp16=True, fp16_init_scale=128, fp16_scale_tolerance=0.0, fp16_scale_window=None, g_fc_layers=3, g_ln=0, gate_before_proj=0, gate_inc_attn=0, il_2act=0, il_ratio=0, il_relu=0, il_relu_linear=0, inc_cur=0, info_linear=0, init_method='km', init_topk_rho=0, input_dropout=0.1, k_sampling=0, keep_interval_updates=-1, keep_last_epochs=-1, kernel_size=0, label_smoothing=0.1, layer_memory_size=512, layer_mha_dim=512, layer_mha_head=1, layer_version='820', lazy_load=False, lb=0, left_pad_source='True', left_pad_target='False', linear_divide=0, lnv='origin', log_format='json', log_interval=1000, lr=[1e-07], lr_period_updates=70000.0, lr_scheduler='cosine', lr_shrink=1.0, m_rnn_head=8, max_epoch=40, max_lr=0.0007, max_sentences=None, max_sentences_valid=None, max_source_positions=1024, max_target_positions=1024, max_tokens=1280, max_update=0, mean_detach=0, mem_q=False, memory_efficient_fp16=False, memory_position='before', memory_type='no', mha_2fc=0, mha_act='none', min_loss_scale=0.0001, min_lr=1e-09, no_epoch_checkpoints=False, no_progress_bar=False, no_save=False, no_token_positional_embeddings=False, norm_mode='baseline', nowb_scale=1.0, num_workers=0, optimizer='adam', optimizer_overrides='{}', qk_bagging=0, qk_big=1, qk_dropout=0, qk_relu=0, qkv_a=5, raw_text=False, reduction_ffn_mode=0, reduction_mode='linear', reduction_rnn='gru', required_batch_size_multiple=8, reset_lr_scheduler=False, reset_meters=False, reset_optimizer=False, reslayer='combine', restore_file='checkpoint_last.pt', rn_conv_k=3, rn_conv_s=3, rn_dim=64, rn_dropout=0, rn_head=1, rn_time=0, rnn_init_type='zeros', rnn_integrate_attn='no', rnn_integrate_type='add', rnn_ratio=1, save_dir='checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp', save_interval=1, save_interval_updates=0, se_activation='none', se_add=0, se_avg_type=0, se_head=0, se_head_type=0, se_inner_ln=0, se_list=[], se_nonlinear=0, se_on_x=0, se_para=0, se_position=0, se_ratio=4, se_res=1, se_scale=1, se_softmax_group=0, se_softmax_t=0, se_vl=0, seed=1, sentence_avg=False, sep_out_proj=0, share_all_embeddings=True, share_conv=0, share_decoder_input_output_embed=False, sigma=0.005, skip_invalid_size_inputs_valid_test=False, source_lang=None, std_detach=0, stride_rho=0, t_mult=1.0, target_lang=None, task='translation', tensorboard_logdir='checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp', threshold_loss_scale=None, train_subset='train', update_freq=[76], upsample_primary=1, use_att=['es', 'ds', 'dc'], use_rn=0, use_se=0, user_dir=None, v_relu=0, valid_subset='valid', validate_interval=1, vl='linear', warmup_init_lr=1e-07, warmup_updates=10000, weight_decay=0.0, weight_dropout=0.1, window_padding=0, window_size=8, xt_attn=0, xt_attn_heads=4, xt_in_attn_heads=1, xt_merge=0, xt_relu1=0, xt_relu2=0)
+| [en] dictionary: 44512 types
+| [fr] dictionary: 44512 types
+| data-bin/wmt14_en_fr valid en-fr 26854 examples
+TransformerModel(
+  (encoder): TransformerCombineEncoder(
+    (embed_tokens): Embedding(44512, 768, padding_idx=1)
+    (embed_positions): SinusoidalPositionalEmbedding()
+    (layers): ModuleList(
+      (0): TransformerCombineEncoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=1, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=7, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+      (1): TransformerCombineEncoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=1, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=7, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+      (2): TransformerCombineEncoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=1, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=7, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+      (3): TransformerCombineEncoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=1, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=7, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+      (4): TransformerCombineEncoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=1, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=7, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+      (5): TransformerCombineEncoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=1, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=7, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+      (6): TransformerCombineEncoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=1, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=7, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+      (7): TransformerCombineEncoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=1, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=7, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+      (8): TransformerCombineEncoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=1, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=7, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+      (9): TransformerCombineEncoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=1, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=7, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+      (10): TransformerCombineEncoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=1, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=7, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+      (11): TransformerCombineEncoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=1, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=7, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+    )
+  )
+  (decoder): TransformerCombineDecoder(
+    (embed_tokens): Embedding(44512, 768, padding_idx=1)
+    (embed_positions): SinusoidalPositionalEmbedding()
+    (layers): ModuleList(
+      (0): TransformerCombineDecoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=2, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=14, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=768, out_features=768, bias=True)
+          (dynamics): ModuleList()
+        )
+        (encoder_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+      (1): TransformerCombineDecoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=2, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=14, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=768, out_features=768, bias=True)
+          (dynamics): ModuleList()
+        )
+        (encoder_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+      (2): TransformerCombineDecoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=2, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=14, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=768, out_features=768, bias=True)
+          (dynamics): ModuleList()
+        )
+        (encoder_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+      (3): TransformerCombineDecoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=2, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=14, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=768, out_features=768, bias=True)
+          (dynamics): ModuleList()
+        )
+        (encoder_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+      (4): TransformerCombineDecoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=2, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=14, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=768, out_features=768, bias=True)
+          (dynamics): ModuleList()
+        )
+        (encoder_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+      (5): TransformerCombineDecoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=2, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=14, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=768, out_features=768, bias=True)
+          (dynamics): ModuleList()
+        )
+        (encoder_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+      (6): TransformerCombineDecoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=2, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=14, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=768, out_features=768, bias=True)
+          (dynamics): ModuleList()
+        )
+        (encoder_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+      (7): TransformerCombineDecoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=2, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=14, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=768, out_features=768, bias=True)
+          (dynamics): ModuleList()
+        )
+        (encoder_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+      (8): TransformerCombineDecoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=2, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=14, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=768, out_features=768, bias=True)
+          (dynamics): ModuleList()
+        )
+        (encoder_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+      (9): TransformerCombineDecoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=2, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=14, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=768, out_features=768, bias=True)
+          (dynamics): ModuleList()
+        )
+        (encoder_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+      (10): TransformerCombineDecoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=2, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=14, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=768, out_features=768, bias=True)
+          (dynamics): ModuleList()
+        )
+        (encoder_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+      (11): TransformerCombineDecoderLayer(
+        (self_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=1536, out_features=768, bias=True)
+          (dynamics): ModuleList(
+            (0): DynamicConv1dTBC(
+              768, kernel_size=3, padding_l=2, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=48, bias=False)
+            )
+            (1): DynamicConv1dTBC(
+              768, kernel_size=15, padding_l=14, num_heads=16, weight_softmax=True, conv_bias=False, renorm_padding=False, in_proj=False, weight_dropout=0.1
+              (weight_linear): Linear(in_features=768, out_features=240, bias=False)
+            )
+          )
+        )
+        (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention820(
+          (out_proj): Linear(in_features=768, out_features=768, bias=True)
+          (dynamics): ModuleList()
+        )
+        (encoder_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=768, out_features=3072, bias=True)
+        (fc2): Linear(in_features=3072, out_features=768, bias=True)
+      )
+    )
+  )
+)
+| model transformer_vaswani_wmt_en_fr_big, criterion LabelSmoothedCrossEntropyCriterion
+| num. model params: 252088368 (num. trained: 252088368)
+| training on 8 GPUs
+| max tokens per GPU = 1280 and max sentences per GPU = None
+| loaded checkpoint checkpoint/enfr_muse_fp/checkpoint_last.pt (epoch 4 @ 8297 updates)
+| loading train data for epoch 4
+| data-bin/wmt14_en_fr train en-fr 35762583 examples
+{"epoch": 5, "update": 4.482, "loss": "3.372", "nll_loss": "1.620", "ppl": "3.07", "wps": "60432", "ups": "0", "wpb": "639599.334", "bsz": "17214.054", "num_updates": "9298", "lr": "0.000650867", "gnorm": "0.136", "clip": "0.000", "oom": "0.000", "loss_scale": "1.000", "wall": "10968", "train_wall": "97749"}
+{"epoch": 5, "update": 4.963, "loss": "3.366", "nll_loss": "1.614", "ppl": "3.06", "wps": "60369", "ups": "0", "wpb": "639623.199", "bsz": "17225.165", "num_updates": "10298", "lr": "0.000699969", "gnorm": "0.142", "clip": "0.000", "oom": "0.000", "loss_scale": "1.000", "wall": "21575", "train_wall": "108161"}
+{"epoch": 5, "train_loss": "3.366", "train_nll_loss": "1.614", "train_ppl": "3.06", "train_wps": "60365", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "10373", "train_lr": "0.000699951", "train_gnorm": "0.143", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "1.000", "train_wall": "22371", "train_train_wall": "108941"}
+{"epoch": 5, "valid_loss": "3.292", "valid_nll_loss": "1.504", "valid_ppl": "2.84", "valid_num_updates": "10373", "valid_best_loss": "3.29199"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint5.pt (epoch 5 @ 10373 updates) (writing took 22.255743741989136 seconds)
+{"epoch": 6, "update": 5.482, "loss": "3.336", "nll_loss": "1.583", "ppl": "3.00", "wps": "60470", "ups": "0", "wpb": "639663.964", "bsz": "17224.630", "num_updates": "11374", "lr": "0.000699335", "gnorm": "0.149", "clip": "0.000", "oom": "0.000", "loss_scale": "1.000", "wall": "33043", "train_wall": "119332"}
+{"epoch": 6, "update": 5.963, "loss": "3.332", "nll_loss": "1.579", "ppl": "2.99", "wps": "60531", "ups": "0", "wpb": "639646.050", "bsz": "17223.608", "num_updates": "12374", "lr": "0.000698016", "gnorm": "0.148", "clip": "0.000", "oom": "0.000", "loss_scale": "1.000", "wall": "43599", "train_wall": "129694"}
+{"epoch": 6, "train_loss": "3.332", "train_nll_loss": "1.579", "train_ppl": "2.99", "train_wps": "60536", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "12449", "train_lr": "0.000697888", "train_gnorm": "0.148", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "1.000", "train_wall": "44389", "train_train_wall": "130469"}
+{"epoch": 6, "valid_loss": "3.270", "valid_nll_loss": "1.466", "valid_ppl": "2.76", "valid_num_updates": "12449", "valid_best_loss": "3.26996"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint6.pt (epoch 6 @ 12449 updates) (writing took 28.669620990753174 seconds)
+{"epoch": 7, "update": 6.482, "loss": "3.308", "nll_loss": "1.553", "ppl": "2.93", "wps": "60559", "ups": "0", "wpb": "639776.172", "bsz": "17258.826", "num_updates": "13450", "lr": "0.000695814", "gnorm": "0.146", "clip": "0.000", "oom": "0.000", "loss_scale": "1.000", "wall": "55052", "train_wall": "140849"}
+{"epoch": 7, "update": 6.963, "loss": "3.306", "nll_loss": "1.552", "ppl": "2.93", "wps": "60352", "ups": "0", "wpb": "639631.879", "bsz": "17226.032", "num_updates": "14450", "lr": "0.000693044", "gnorm": "0.145", "clip": "0.000", "oom": "0.000", "loss_scale": "1.000", "wall": "65684", "train_wall": "151286"}
+{"epoch": 7, "train_loss": "3.306", "train_nll_loss": "1.552", "train_ppl": "2.93", "train_wps": "60347", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "14525", "train_lr": "0.000692808", "train_gnorm": "0.145", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "1.000", "train_wall": "66480", "train_train_wall": "152068"}
+{"epoch": 7, "valid_loss": "3.248", "valid_nll_loss": "1.451", "valid_ppl": "2.73", "valid_num_updates": "14525", "valid_best_loss": "3.24757"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint7.pt (epoch 7 @ 14525 updates) (writing took 29.810150146484375 seconds)
+{"epoch": 8, "update": 7.482, "loss": "3.287", "nll_loss": "1.532", "ppl": "2.89", "wps": "60204", "ups": "0", "wpb": "639626.388", "bsz": "17244.134", "num_updates": "15526", "lr": "0.000689293", "gnorm": "0.144", "clip": "0.000", "oom": "0.000", "loss_scale": "1.000", "wall": "77203", "train_wall": "162508"}
+{"epoch": 8, "update": 7.963, "loss": "3.287", "nll_loss": "1.532", "ppl": "2.89", "wps": "60226", "ups": "0", "wpb": "639655.975", "bsz": "17231.069", "num_updates": "16526", "lr": "0.000685097", "gnorm": "0.143", "clip": "0.000", "oom": "0.000", "loss_scale": "1.000", "wall": "87820", "train_wall": "172934"}
+{"epoch": 8, "train_loss": "3.287", "train_nll_loss": "1.532", "train_ppl": "2.89", "train_wps": "60225", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "16601", "train_lr": "0.000684755", "train_gnorm": "0.143", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "1.000", "train_wall": "88615", "train_train_wall": "173715"}
+{"epoch": 8, "valid_loss": "3.229", "valid_nll_loss": "1.438", "valid_ppl": "2.71", "valid_num_updates": "16601", "valid_best_loss": "3.22869"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint8.pt (epoch 8 @ 16601 updates) (writing took 29.736615657806396 seconds)
+{"epoch": 9, "update": 8.482, "loss": "3.272", "nll_loss": "1.516", "ppl": "2.86", "wps": "60241", "ups": "0", "wpb": "639549.488", "bsz": "17232.331", "num_updates": "17602", "lr": "0.000679829", "gnorm": "0.141", "clip": "0.000", "oom": "0.000", "loss_scale": "1.000", "wall": "99331", "train_wall": "184149"}
+{"epoch": 9, "update": 8.963, "loss": "3.272", "nll_loss": "1.516", "ppl": "2.86", "wps": "60268", "ups": "0", "wpb": "639615.032", "bsz": "17228.304", "num_updates": "18602", "lr": "0.000674244", "gnorm": "0.139", "clip": "0.000", "oom": "0.000", "loss_scale": "1.000", "wall": "109940", "train_wall": "194562"}
+{"epoch": 9, "train_loss": "3.272", "train_nll_loss": "1.516", "train_ppl": "2.86", "train_wps": "60268", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "18677", "train_lr": "0.000673799", "train_gnorm": "0.139", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "1.000", "train_wall": "110735", "train_train_wall": "195343"}
+{"epoch": 9, "valid_loss": "3.219", "valid_nll_loss": "1.430", "valid_ppl": "2.70", "valid_num_updates": "18677", "valid_best_loss": "3.21929"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint9.pt (epoch 9 @ 18677 updates) (writing took 28.570248126983643 seconds)
+{"epoch": 10, "update": 9.482, "loss": "3.258", "nll_loss": "1.502", "ppl": "2.83", "wps": "60280", "ups": "0", "wpb": "639540.695", "bsz": "17217.490", "num_updates": "19678", "lr": "0.000667505", "gnorm": "0.136", "clip": "0.000", "oom": "0.000", "loss_scale": "1.000", "wall": "121443", "train_wall": "205768"}
+{"epoch": 10, "update": 9.963, "loss": "3.259", "nll_loss": "1.503", "ppl": "2.83", "wps": "60341", "ups": "0", "wpb": "639635.440", "bsz": "17227.218", "num_updates": "20678", "lr": "0.000660579", "gnorm": "0.135", "clip": "0.000", "oom": "0.000", "loss_scale": "1.000", "wall": "132034", "train_wall": "216167"}
+{"epoch": 10, "train_loss": "3.259", "train_nll_loss": "1.503", "train_ppl": "2.83", "train_wps": "60342", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "20753", "train_lr": "0.000660034", "train_gnorm": "0.135", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "1.000", "train_wall": "132827", "train_train_wall": "216946"}
+{"epoch": 10, "valid_loss": "3.207", "valid_nll_loss": "1.415", "valid_ppl": "2.67", "valid_num_updates": "20753", "valid_best_loss": "3.20709"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint10.pt (epoch 10 @ 20753 updates) (writing took 38.289891481399536 seconds)
+{"epoch": 11, "update": 10.482, "loss": "3.247", "nll_loss": "1.490", "ppl": "2.81", "wps": "60392", "ups": "0", "wpb": "639723.351", "bsz": "17242.270", "num_updates": "21754", "lr": "0.000652427", "gnorm": "0.132", "clip": "0.000", "oom": "0.000", "loss_scale": "1.000", "wall": "143529", "train_wall": "227357"}
+{"epoch": 11, "update": 10.963, "loss": "3.247", "nll_loss": "1.491", "ppl": "2.81", "wps": "60377", "ups": "0", "wpb": "639639.264", "bsz": "17226.790", "num_updates": "22754", "lr": "0.00064422", "gnorm": "0.130", "clip": "0.000", "oom": "0.000", "loss_scale": "1.000", "wall": "154124", "train_wall": "237761"}
+{"epoch": 11, "train_loss": "3.247", "train_nll_loss": "1.491", "train_ppl": "2.81", "train_wps": "60384", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "22829", "train_lr": "0.00064358", "train_gnorm": "0.130", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "1.000", "train_wall": "154915", "train_train_wall": "238536"}
+{"epoch": 11, "valid_loss": "3.199", "valid_nll_loss": "1.406", "valid_ppl": "2.65", "valid_num_updates": "22829", "valid_best_loss": "3.19939"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint11.pt (epoch 11 @ 22829 updates) (writing took 30.30770230293274 seconds)
+{"epoch": 12, "update": 11.482, "loss": "3.236", "nll_loss": "1.479", "ppl": "2.79", "wps": "60643", "ups": "0", "wpb": "639654.411", "bsz": "17221.836", "num_updates": "23830", "lr": "0.000634727", "gnorm": "0.127", "clip": "0.000", "oom": "0.000", "loss_scale": "1.000", "wall": "165563", "train_wall": "248901"}
+{"epoch": 12, "update": 11.963, "loss": "3.237", "nll_loss": "1.480", "ppl": "2.79", "wps": "60530", "ups": "0", "wpb": "639653.643", "bsz": "17230.947", "num_updates": "24830", "lr": "0.000625309", "gnorm": "0.126", "clip": "0.000", "oom": "0.000", "loss_scale": "1.000", "wall": "176150", "train_wall": "259295"}
+{"epoch": 12, "train_loss": "3.237", "train_nll_loss": "1.480", "train_ppl": "2.79", "train_wps": "60518", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "24905", "train_lr": "0.00062458", "train_gnorm": "0.126", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "1.000", "train_wall": "176945", "train_train_wall": "260075"}
+{"epoch": 12, "valid_loss": "3.188", "valid_nll_loss": "1.396", "valid_ppl": "2.63", "valid_num_updates": "24905", "valid_best_loss": "3.1875"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint12.pt (epoch 12 @ 24905 updates) (writing took 29.79843521118164 seconds)
+{"epoch": 13, "update": 12.482, "loss": "3.226", "nll_loss": "1.469", "ppl": "2.77", "wps": "60411", "ups": "0", "wpb": "639601.168", "bsz": "17240.808", "num_updates": "25906", "lr": "0.000614556", "gnorm": "0.123", "clip": "0.000", "oom": "0.000", "loss_scale": "1.000", "wall": "187632", "train_wall": "270479"}
+| WARNING: overflow detected, setting loss scale to: 0.5
+{"epoch": 13, "update": 12.963, "loss": "3.227", "nll_loss": "1.470", "ppl": "2.77", "wps": "60457", "ups": "0", "wpb": "639637.153", "bsz": "17227.058", "num_updates": "26905", "lr": "0.000604021", "gnorm": "0.122", "clip": "0.000", "oom": "0.000", "loss_scale": "0.500", "wall": "198194", "train_wall": "280846"}
+{"epoch": 13, "train_loss": "3.227", "train_nll_loss": "1.470", "train_ppl": "2.77", "train_wps": "60458", "train_ups": "0", "train_wpb": "639608.942", "train_bsz": "17227.019", "train_num_updates": "26980", "train_lr": "0.000603209", "train_gnorm": "0.122", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.500", "train_wall": "198986", "train_train_wall": "281624"}
+{"epoch": 13, "valid_loss": "3.183", "valid_nll_loss": "1.392", "valid_ppl": "2.62", "valid_num_updates": "26980", "valid_best_loss": "3.18341"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint13.pt (epoch 13 @ 26980 updates) (writing took 28.971766710281372 seconds)
+{"epoch": 14, "update": 13.482, "loss": "3.217", "nll_loss": "1.459", "ppl": "2.75", "wps": "60448", "ups": "0", "wpb": "639588.218", "bsz": "17220.558", "num_updates": "27981", "lr": "0.000592103", "gnorm": "0.120", "clip": "0.000", "oom": "0.000", "loss_scale": "0.500", "wall": "209666", "train_wall": "292019"}
+{"epoch": 14, "update": 13.963, "loss": "3.218", "nll_loss": "1.460", "ppl": "2.75", "wps": "60464", "ups": "0", "wpb": "639648.861", "bsz": "17225.429", "num_updates": "28981", "lr": "0.00058052", "gnorm": "0.119", "clip": "0.000", "oom": "0.000", "loss_scale": "0.500", "wall": "220243", "train_wall": "302404"}
+{"epoch": 14, "train_loss": "3.218", "train_nll_loss": "1.460", "train_ppl": "2.75", "train_wps": "60457", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "29056", "train_lr": "0.000579633", "train_gnorm": "0.119", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.500", "train_wall": "221037", "train_train_wall": "303184"}
+{"epoch": 14, "valid_loss": "3.176", "valid_nll_loss": "1.383", "valid_ppl": "2.61", "valid_num_updates": "29056", "valid_best_loss": "3.17565"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint14.pt (epoch 14 @ 29056 updates) (writing took 29.638180017471313 seconds)
+{"epoch": 15, "update": 14.482, "loss": "3.209", "nll_loss": "1.450", "ppl": "2.73", "wps": "60372", "ups": "0", "wpb": "639637.071", "bsz": "17229.955", "num_updates": "30057", "lr": "0.00056754", "gnorm": "0.117", "clip": "0.000", "oom": "0.000", "loss_scale": "0.500", "wall": "231732", "train_wall": "313596"}
+{"epoch": 15, "update": 14.963, "loss": "3.210", "nll_loss": "1.451", "ppl": "2.73", "wps": "60397", "ups": "0", "wpb": "639649.592", "bsz": "17225.781", "num_updates": "31057", "lr": "0.000555021", "gnorm": "0.116", "clip": "0.000", "oom": "0.000", "loss_scale": "0.500", "wall": "242319", "train_wall": "323988"}
+{"epoch": 15, "train_loss": "3.210", "train_nll_loss": "1.451", "train_ppl": "2.73", "train_wps": "60400", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "31132", "train_lr": "0.000554065", "train_gnorm": "0.116", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.500", "train_wall": "243110", "train_train_wall": "324766"}
+{"epoch": 15, "valid_loss": "3.166", "valid_nll_loss": "1.375", "valid_ppl": "2.59", "valid_num_updates": "31132", "valid_best_loss": "3.16557"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint15.pt (epoch 15 @ 31132 updates) (writing took 29.411813974380493 seconds)
+{"epoch": 16, "update": 15.482, "loss": "3.200", "nll_loss": "1.440", "ppl": "2.71", "wps": "60544", "ups": "0", "wpb": "639619.732", "bsz": "17230.533", "num_updates": "32133", "lr": "0.00054109", "gnorm": "0.114", "clip": "0.000", "oom": "0.000", "loss_scale": "0.500", "wall": "253773", "train_wall": "335148"}
+| WARNING: overflow detected, setting loss scale to: 0.25
+{"epoch": 16, "update": 15.963, "loss": "3.201", "nll_loss": "1.442", "ppl": "2.72", "wps": "60439", "ups": "0", "wpb": "639606.579", "bsz": "17224.430", "num_updates": "33132", "lr": "0.000527756", "gnorm": "0.113", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "264363", "train_wall": "345543"}
+{"epoch": 16, "train_loss": "3.201", "train_nll_loss": "1.442", "train_ppl": "2.72", "train_wps": "60444", "train_ups": "0", "train_wpb": "639602.094", "train_bsz": "17226.520", "train_num_updates": "33207", "train_lr": "0.000526741", "train_gnorm": "0.113", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.250", "train_wall": "265155", "train_train_wall": "346321"}
+{"epoch": 16, "valid_loss": "3.160", "valid_nll_loss": "1.370", "valid_ppl": "2.58", "valid_num_updates": "33207", "valid_best_loss": "3.16041"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint16.pt (epoch 16 @ 33207 updates) (writing took 28.943161010742188 seconds)
+{"epoch": 17, "update": 16.482, "loss": "3.192", "nll_loss": "1.432", "ppl": "2.70", "wps": "60370", "ups": "0", "wpb": "639691.843", "bsz": "17211.922", "num_updates": "34208", "lr": "0.000512996", "gnorm": "0.111", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "275850", "train_wall": "356731"}
+{"epoch": 17, "update": 16.963, "loss": "3.193", "nll_loss": "1.434", "ppl": "2.70", "wps": "60403", "ups": "0", "wpb": "639652.189", "bsz": "17229.350", "num_updates": "35208", "lr": "0.000498938", "gnorm": "0.110", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "286433", "train_wall": "367122"}
+{"epoch": 17, "train_loss": "3.193", "train_nll_loss": "1.434", "train_ppl": "2.70", "train_wps": "60394", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "35283", "train_lr": "0.000497871", "train_gnorm": "0.110", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.250", "train_wall": "287229", "train_train_wall": "367904"}
+{"epoch": 17, "valid_loss": "3.154", "valid_nll_loss": "1.365", "valid_ppl": "2.58", "valid_num_updates": "35283", "valid_best_loss": "3.15446"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint17.pt (epoch 17 @ 35283 updates) (writing took 28.88542628288269 seconds)
+{"epoch": 18, "update": 17.482, "loss": "3.184", "nll_loss": "1.424", "ppl": "2.68", "wps": "60349", "ups": "0", "wpb": "639557.866", "bsz": "17236.523", "num_updates": "36284", "lr": "0.000483477", "gnorm": "0.109", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "297925", "train_wall": "378317"}
+{"epoch": 18, "update": 17.963, "loss": "3.185", "nll_loss": "1.425", "ppl": "2.69", "wps": "60417", "ups": "0", "wpb": "639631.299", "bsz": "17230.600", "num_updates": "37284", "lr": "0.000468828", "gnorm": "0.108", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "308501", "train_wall": "388701"}
+{"epoch": 18, "train_loss": "3.185", "train_nll_loss": "1.425", "train_ppl": "2.69", "train_wps": "60423", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "37359", "train_lr": "0.000467719", "train_gnorm": "0.107", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.250", "train_wall": "309292", "train_train_wall": "389477"}
+{"epoch": 18, "valid_loss": "3.147", "valid_nll_loss": "1.359", "valid_ppl": "2.57", "valid_num_updates": "37359", "valid_best_loss": "3.1466"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint18.pt (epoch 18 @ 37359 updates) (writing took 29.105476140975952 seconds)
+{"epoch": 19, "update": 18.482, "loss": "3.177", "nll_loss": "1.416", "ppl": "2.67", "wps": "60529", "ups": "0", "wpb": "639615.253", "bsz": "17217.100", "num_updates": "38360", "lr": "0.000452799", "gnorm": "0.105", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "319957", "train_wall": "399862"}
+{"epoch": 19, "update": 18.963, "loss": "3.178", "nll_loss": "1.417", "ppl": "2.67", "wps": "60589", "ups": "0", "wpb": "639646.092", "bsz": "17229.889", "num_updates": "39360", "lr": "0.000437687", "gnorm": "0.105", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "330505", "train_wall": "410218"}
+{"epoch": 19, "train_loss": "3.178", "train_nll_loss": "1.417", "train_ppl": "2.67", "train_wps": "60589", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "39435", "train_lr": "0.000436546", "train_gnorm": "0.105", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.250", "train_wall": "331295", "train_train_wall": "410994"}
+{"epoch": 19, "valid_loss": "3.141", "valid_nll_loss": "1.353", "valid_ppl": "2.56", "valid_num_updates": "39435", "valid_best_loss": "3.1405"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint19.pt (epoch 19 @ 39435 updates) (writing took 29.136696577072144 seconds)
+{"epoch": 20, "update": 19.482, "loss": "3.168", "nll_loss": "1.407", "ppl": "2.65", "wps": "60629", "ups": "0", "wpb": "639701.313", "bsz": "17226.883", "num_updates": "40436", "lr": "0.000421231", "gnorm": "0.103", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "341945", "train_wall": "421363"}
+{"epoch": 20, "update": 19.963, "loss": "3.170", "nll_loss": "1.409", "ppl": "2.65", "wps": "60580", "ups": "0", "wpb": "639630.225", "bsz": "17229.198", "num_updates": "41436", "lr": "0.000405787", "gnorm": "0.102", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "352511", "train_wall": "431736"}
+{"epoch": 20, "train_loss": "3.170", "train_nll_loss": "1.409", "train_ppl": "2.65", "train_wps": "60594", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "41511", "train_lr": "0.000404624", "train_gnorm": "0.102", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.250", "train_wall": "353297", "train_train_wall": "432508"}
+{"epoch": 20, "valid_loss": "3.136", "valid_nll_loss": "1.346", "valid_ppl": "2.54", "valid_num_updates": "41511", "valid_best_loss": "3.13641"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint20.pt (epoch 20 @ 41511 updates) (writing took 29.077749490737915 seconds)
+{"epoch": 21, "update": 20.482, "loss": "3.161", "nll_loss": "1.398", "ppl": "2.64", "wps": "60537", "ups": "0", "wpb": "639625.050", "bsz": "17228.226", "num_updates": "42512", "lr": "0.000389045", "gnorm": "0.101", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "363963", "train_wall": "442891"}
+{"epoch": 21, "update": 20.963, "loss": "3.162", "nll_loss": "1.400", "ppl": "2.64", "wps": "60469", "ups": "0", "wpb": "639607.025", "bsz": "17223.655", "num_updates": "43512", "lr": "0.000373403", "gnorm": "0.100", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "374552", "train_wall": "453287"}
+{"epoch": 21, "train_loss": "3.162", "train_nll_loss": "1.401", "train_ppl": "2.64", "train_wps": "60454", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "43587", "train_lr": "0.000372227", "train_gnorm": "0.100", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.250", "train_wall": "375351", "train_train_wall": "454070"}
+{"epoch": 21, "valid_loss": "3.130", "valid_nll_loss": "1.341", "valid_ppl": "2.53", "valid_num_updates": "43587", "valid_best_loss": "3.12968"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint21.pt (epoch 21 @ 43587 updates) (writing took 29.854005098342896 seconds)
+{"epoch": 22, "update": 21.482, "loss": "3.154", "nll_loss": "1.391", "ppl": "2.62", "wps": "59859", "ups": "0", "wpb": "639674.507", "bsz": "17242.532", "num_updates": "44588", "lr": "0.00035652", "gnorm": "0.100", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "386137", "train_wall": "464574"}
+{"epoch": 22, "update": 21.963, "loss": "3.155", "nll_loss": "1.392", "ppl": "2.63", "wps": "60123", "ups": "0", "wpb": "639652.211", "bsz": "17232.290", "num_updates": "45588", "lr": "0.000340816", "gnorm": "0.099", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "396729", "train_wall": "474971"}
+{"epoch": 22, "train_loss": "3.155", "train_nll_loss": "1.392", "train_ppl": "2.63", "train_wps": "60130", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "45663", "train_lr": "0.000339639", "train_gnorm": "0.099", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.250", "train_wall": "397523", "train_train_wall": "475751"}
+{"epoch": 22, "valid_loss": "3.125", "valid_nll_loss": "1.337", "valid_ppl": "2.53", "valid_num_updates": "45663", "valid_best_loss": "3.12464"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint22.pt (epoch 22 @ 45663 updates) (writing took 29.227039575576782 seconds)
+{"epoch": 23, "update": 22.482, "loss": "3.146", "nll_loss": "1.383", "ppl": "2.61", "wps": "60491", "ups": "0", "wpb": "639682.954", "bsz": "17244.682", "num_updates": "46664", "lr": "0.00032394", "gnorm": "0.097", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "408196", "train_wall": "486142"}
+{"epoch": 23, "update": 22.963, "loss": "3.148", "nll_loss": "1.385", "ppl": "2.61", "wps": "60590", "ups": "0", "wpb": "639653.936", "bsz": "17226.513", "num_updates": "47664", "lr": "0.00030831", "gnorm": "0.097", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "418735", "train_wall": "496489"}
+{"epoch": 23, "train_loss": "3.148", "train_nll_loss": "1.385", "train_ppl": "2.61", "train_wps": "60595", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "47739", "train_lr": "0.00030714", "train_gnorm": "0.097", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.250", "train_wall": "419524", "train_train_wall": "497263"}
+{"epoch": 23, "valid_loss": "3.121", "valid_nll_loss": "1.330", "valid_ppl": "2.51", "valid_num_updates": "47739", "valid_best_loss": "3.12076"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint23.pt (epoch 23 @ 47739 updates) (writing took 29.35747504234314 seconds)
+{"epoch": 24, "update": 23.482, "loss": "3.140", "nll_loss": "1.376", "ppl": "2.59", "wps": "60557", "ups": "0", "wpb": "639543.433", "bsz": "17232.849", "num_updates": "48740", "lr": "0.000291586", "gnorm": "0.096", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "430184", "train_wall": "507641"}
+{"epoch": 24, "update": 23.963, "loss": "3.141", "nll_loss": "1.377", "ppl": "2.60", "wps": "60463", "ups": "0", "wpb": "639615.368", "bsz": "17225.641", "num_updates": "49740", "lr": "0.000276165", "gnorm": "0.095", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "440780", "train_wall": "518045"}
+{"epoch": 24, "train_loss": "3.141", "train_nll_loss": "1.377", "train_ppl": "2.60", "train_wps": "60446", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "49815", "train_lr": "0.000275014", "train_gnorm": "0.095", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.250", "train_wall": "441579", "train_train_wall": "518829"}
+{"epoch": 24, "valid_loss": "3.116", "valid_nll_loss": "1.323", "valid_ppl": "2.50", "valid_num_updates": "49815", "valid_best_loss": "3.11592"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint24.pt (epoch 24 @ 49815 updates) (writing took 29.559768199920654 seconds)
+{"epoch": 25, "update": 24.482, "loss": "3.133", "nll_loss": "1.368", "ppl": "2.58", "wps": "60176", "ups": "0", "wpb": "639633.013", "bsz": "17242.870", "num_updates": "50816", "lr": "0.000259739", "gnorm": "0.093", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "452309", "train_wall": "529276"}
+{"epoch": 25, "update": 24.963, "loss": "3.134", "nll_loss": "1.369", "ppl": "2.58", "wps": "60120", "ups": "0", "wpb": "639645.791", "bsz": "17233.116", "num_updates": "51816", "lr": "0.000244662", "gnorm": "0.093", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "462959", "train_wall": "539732"}
+{"epoch": 25, "train_loss": "3.134", "train_nll_loss": "1.369", "train_ppl": "2.58", "train_wps": "60121", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "51891", "train_lr": "0.000243539", "train_gnorm": "0.093", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.250", "train_wall": "463755", "train_train_wall": "540513"}
+{"epoch": 25, "valid_loss": "3.111", "valid_nll_loss": "1.319", "valid_ppl": "2.49", "valid_num_updates": "51891", "valid_best_loss": "3.11118"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint25.pt (epoch 25 @ 51891 updates) (writing took 29.53287386894226 seconds)
+{"epoch": 26, "update": 25.482, "loss": "3.125", "nll_loss": "1.360", "ppl": "2.57", "wps": "60317", "ups": "0", "wpb": "639661.793", "bsz": "17243.374", "num_updates": "52892", "lr": "0.000228676", "gnorm": "0.094", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "474458", "train_wall": "550937"}
+{"epoch": 26, "update": 25.963, "loss": "3.127", "nll_loss": "1.362", "ppl": "2.57", "wps": "60239", "ups": "0", "wpb": "639670.412", "bsz": "17229.210", "num_updates": "53892", "lr": "0.000214072", "gnorm": "0.092", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "485091", "train_wall": "561378"}
+{"epoch": 26, "train_loss": "3.127", "train_nll_loss": "1.362", "train_ppl": "2.57", "train_wps": "60226", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "53967", "train_lr": "0.000212988", "train_gnorm": "0.092", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.250", "train_wall": "485890", "train_train_wall": "562163"}
+{"epoch": 26, "valid_loss": "3.107", "valid_nll_loss": "1.315", "valid_ppl": "2.49", "valid_num_updates": "53967", "valid_best_loss": "3.10673"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint26.pt (epoch 26 @ 53967 updates) (writing took 29.71013903617859 seconds)
+{"epoch": 27, "update": 26.482, "loss": "3.120", "nll_loss": "1.354", "ppl": "2.56", "wps": "60141", "ups": "0", "wpb": "639732.417", "bsz": "17227.931", "num_updates": "54968", "lr": "0.000198665", "gnorm": "0.091", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "496627", "train_wall": "572615"}
+{"epoch": 27, "update": 26.963, "loss": "3.121", "nll_loss": "1.355", "ppl": "2.56", "wps": "60200", "ups": "0", "wpb": "639668.317", "bsz": "17228.456", "num_updates": "55968", "lr": "0.000184662", "gnorm": "0.091", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "507241", "train_wall": "583036"}
+{"epoch": 27, "train_loss": "3.121", "train_nll_loss": "1.355", "train_ppl": "2.56", "train_wps": "60202", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "56043", "train_lr": "0.000183625", "train_gnorm": "0.091", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.250", "train_wall": "508035", "train_train_wall": "583816"}
+{"epoch": 27, "valid_loss": "3.102", "valid_nll_loss": "1.313", "valid_ppl": "2.48", "valid_num_updates": "56043", "valid_best_loss": "3.10246"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint27.pt (epoch 27 @ 56043 updates) (writing took 29.640447854995728 seconds)
+{"epoch": 28, "update": 27.482, "loss": "3.113", "nll_loss": "1.347", "ppl": "2.54", "wps": "60356", "ups": "0", "wpb": "639697.620", "bsz": "17235.880", "num_updates": "57044", "lr": "0.000169968", "gnorm": "0.090", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "518732", "train_wall": "594228"}
+{"epoch": 28, "update": 27.963, "loss": "3.115", "nll_loss": "1.349", "ppl": "2.55", "wps": "60366", "ups": "0", "wpb": "639661.958", "bsz": "17232.176", "num_updates": "58044", "lr": "0.000156687", "gnorm": "0.089", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "529326", "train_wall": "604629"}
+{"epoch": 28, "train_loss": "3.115", "train_nll_loss": "1.348", "train_ppl": "2.55", "train_wps": "60361", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "58119", "train_lr": "0.000155707", "train_gnorm": "0.089", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.250", "train_wall": "530121", "train_train_wall": "605410"}
+{"epoch": 28, "valid_loss": "3.099", "valid_nll_loss": "1.310", "valid_ppl": "2.48", "valid_num_updates": "58119", "valid_best_loss": "3.09907"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint28.pt (epoch 28 @ 58119 updates) (writing took 29.456929922103882 seconds)
+{"epoch": 29, "update": 28.482, "loss": "3.108", "nll_loss": "1.341", "ppl": "2.53", "wps": "60413", "ups": "0", "wpb": "639626.289", "bsz": "17242.418", "num_updates": "59120", "lr": "0.000142833", "gnorm": "0.088", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "540807", "train_wall": "615814"}
+{"epoch": 29, "update": 28.963, "loss": "3.109", "nll_loss": "1.342", "ppl": "2.54", "wps": "60440", "ups": "0", "wpb": "639646.660", "bsz": "17231.353", "num_updates": "60120", "lr": "0.000130389", "gnorm": "0.088", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "551386", "train_wall": "626198"}
+{"epoch": 29, "train_loss": "3.109", "train_nll_loss": "1.342", "train_ppl": "2.54", "train_wps": "60440", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "60195", "train_lr": "0.000129474", "train_gnorm": "0.088", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.250", "train_wall": "552178", "train_train_wall": "626976"}
+{"epoch": 29, "valid_loss": "3.095", "valid_nll_loss": "1.305", "valid_ppl": "2.47", "valid_num_updates": "60195", "valid_best_loss": "3.0952"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint29.pt (epoch 29 @ 60195 updates) (writing took 29.908819675445557 seconds)
+{"epoch": 30, "update": 29.482, "loss": "3.102", "nll_loss": "1.335", "ppl": "2.52", "wps": "60471", "ups": "0", "wpb": "639669.714", "bsz": "17242.699", "num_updates": "61196", "lr": "0.000117495", "gnorm": "0.086", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "562858", "train_wall": "637372"}
+{"epoch": 30, "update": 29.963, "loss": "3.103", "nll_loss": "1.336", "ppl": "2.52", "wps": "60433", "ups": "0", "wpb": "639620.000", "bsz": "17226.533", "num_updates": "62196", "lr": "0.000105997", "gnorm": "0.086", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "573447", "train_wall": "647769"}
+{"epoch": 30, "train_loss": "3.103", "train_nll_loss": "1.336", "train_ppl": "2.53", "train_wps": "60424", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "62271", "train_lr": "0.000105154", "train_gnorm": "0.086", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.250", "train_wall": "574244", "train_train_wall": "648551"}
+{"epoch": 30, "valid_loss": "3.092", "valid_nll_loss": "1.303", "valid_ppl": "2.47", "valid_num_updates": "62271", "valid_best_loss": "3.09206"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint30.pt (epoch 30 @ 62271 updates) (writing took 30.299282550811768 seconds)
+{"epoch": 31, "update": 30.482, "loss": "3.098", "nll_loss": "1.330", "ppl": "2.51", "wps": "60434", "ups": "0", "wpb": "639730.576", "bsz": "17240.408", "num_updates": "63272", "lr": "9.41747e-05", "gnorm": "0.084", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "584929", "train_wall": "658955"}
+{"epoch": 31, "update": 30.963, "loss": "3.099", "nll_loss": "1.331", "ppl": "2.52", "wps": "60467", "ups": "0", "wpb": "639643.176", "bsz": "17226.402", "num_updates": "64272", "lr": "8.37217e-05", "gnorm": "0.084", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "595500", "train_wall": "669333"}
+{"epoch": 31, "train_loss": "3.099", "train_nll_loss": "1.331", "train_ppl": "2.52", "train_wps": "60470", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "64347", "train_lr": "8.29591e-05", "train_gnorm": "0.084", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.250", "train_wall": "596291", "train_train_wall": "670109"}
+{"epoch": 31, "valid_loss": "3.090", "valid_nll_loss": "1.298", "valid_ppl": "2.46", "valid_num_updates": "64347", "valid_best_loss": "3.09005"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint31.pt (epoch 31 @ 64347 updates) (writing took 39.384584188461304 seconds)
+{"epoch": 32, "update": 31.482, "loss": "3.094", "nll_loss": "1.326", "ppl": "2.51", "wps": "60501", "ups": "0", "wpb": "639466.375", "bsz": "17219.542", "num_updates": "65348", "lr": "7.30738e-05", "gnorm": "0.083", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "606969", "train_wall": "680495"}
+{"epoch": 32, "update": 31.963, "loss": "3.094", "nll_loss": "1.326", "ppl": "2.51", "wps": "60452", "ups": "0", "wpb": "639634.849", "bsz": "17231.593", "num_updates": "66348", "lr": "6.37566e-05", "gnorm": "0.082", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "617561", "train_wall": "690895"}
+{"epoch": 32, "train_loss": "3.094", "train_nll_loss": "1.326", "train_ppl": "2.51", "train_wps": "60445", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "66423", "train_lr": "6.30808e-05", "train_gnorm": "0.082", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.250", "train_wall": "618356", "train_train_wall": "691676"}
+{"epoch": 32, "valid_loss": "3.088", "valid_nll_loss": "1.296", "valid_ppl": "2.46", "valid_num_updates": "66423", "valid_best_loss": "3.08785"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint32.pt (epoch 32 @ 66423 updates) (writing took 30.784048795700073 seconds)
+{"epoch": 33, "update": 32.482, "loss": "3.090", "nll_loss": "1.321", "ppl": "2.50", "wps": "60449", "ups": "0", "wpb": "639567.194", "bsz": "17226.232", "num_updates": "67424", "lr": "5.43756e-05", "gnorm": "0.081", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "629037", "train_wall": "702073"}
+{"epoch": 33, "update": 32.963, "loss": "3.090", "nll_loss": "1.322", "ppl": "2.50", "wps": "60482", "ups": "0", "wpb": "639648.412", "bsz": "17225.600", "num_updates": "68424", "lr": "4.62749e-05", "gnorm": "0.081", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "639608", "train_wall": "712452"}
+{"epoch": 33, "train_loss": "3.090", "train_nll_loss": "1.322", "train_ppl": "2.50", "train_wps": "60476", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "68499", "train_lr": "4.56918e-05", "train_gnorm": "0.081", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.250", "train_wall": "640402", "train_train_wall": "713232"}
+{"epoch": 33, "valid_loss": "3.086", "valid_nll_loss": "1.294", "valid_ppl": "2.45", "valid_num_updates": "68499", "valid_best_loss": "3.08615"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint33.pt (epoch 33 @ 68499 updates) (writing took 37.93916440010071 seconds)
+{"epoch": 34, "update": 33.482, "loss": "3.087", "nll_loss": "1.318", "ppl": "2.49", "wps": "60635", "ups": "0", "wpb": "639629.758", "bsz": "17226.254", "num_updates": "69500", "lr": "3.82423e-05", "gnorm": "0.080", "clip": "0.000", "oom": "0.000", "loss_scale": "0.250", "wall": "651059", "train_wall": "723599"}
+| WARNING: overflow detected, setting loss scale to: 0.125
+{"epoch": 34, "update": 33.963, "loss": "3.087", "nll_loss": "1.318", "ppl": "2.49", "wps": "60500", "ups": "0", "wpb": "639641.061", "bsz": "17227.667", "num_updates": "70499", "lr": "3.14349e-05", "gnorm": "0.079", "clip": "0.000", "oom": "0.000", "loss_scale": "0.125", "wall": "661645", "train_wall": "733994"}
+{"epoch": 34, "train_loss": "3.087", "train_nll_loss": "1.318", "train_ppl": "2.49", "train_wps": "60491", "train_ups": "0", "train_wpb": "639604.012", "train_bsz": "17226.977", "train_num_updates": "70574", "train_lr": "3.09495e-05", "train_gnorm": "0.079", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.125", "train_wall": "662440", "train_train_wall": "734775"}
+{"epoch": 34, "valid_loss": "3.085", "valid_nll_loss": "1.293", "valid_ppl": "2.45", "valid_num_updates": "70574", "valid_best_loss": "3.08464"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint34.pt (epoch 34 @ 70574 updates) (writing took 29.79800820350647 seconds)
+{"epoch": 35, "update": 34.482, "loss": "3.085", "nll_loss": "1.316", "ppl": "2.49", "wps": "60211", "ups": "0", "wpb": "639701.912", "bsz": "17216.499", "num_updates": "71575", "lr": "2.48195e-05", "gnorm": "0.078", "clip": "0.000", "oom": "0.000", "loss_scale": "0.125", "wall": "673164", "train_wall": "745216"}
+{"epoch": 35, "update": 34.963, "loss": "3.085", "nll_loss": "1.315", "ppl": "2.49", "wps": "60285", "ups": "0", "wpb": "639631.219", "bsz": "17227.543", "num_updates": "72575", "lr": "1.93509e-05", "gnorm": "0.078", "clip": "0.000", "oom": "0.000", "loss_scale": "0.125", "wall": "683760", "train_wall": "755621"}
+{"epoch": 35, "train_loss": "3.085", "train_nll_loss": "1.315", "train_ppl": "2.49", "train_wps": "60281", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "72650", "train_lr": "1.89674e-05", "train_gnorm": "0.078", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.125", "train_wall": "684556", "train_train_wall": "756403"}
+{"epoch": 35, "valid_loss": "3.084", "valid_nll_loss": "1.292", "valid_ppl": "2.45", "valid_num_updates": "72650", "valid_best_loss": "3.08355"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint35.pt (epoch 35 @ 72650 updates) (writing took 29.534720182418823 seconds)
+{"epoch": 36, "update": 35.482, "loss": "3.082", "nll_loss": "1.313", "ppl": "2.48", "wps": "60059", "ups": "0", "wpb": "639465.825", "bsz": "17221.663", "num_updates": "73651", "lr": "1.42107e-05", "gnorm": "0.076", "clip": "0.000", "oom": "0.000", "loss_scale": "0.125", "wall": "695303", "train_wall": "766866"}
+{"epoch": 36, "update": 35.963, "loss": "3.083", "nll_loss": "1.313", "ppl": "2.48", "wps": "60091", "ups": "0", "wpb": "639634.112", "bsz": "17229.357", "num_updates": "74651", "lr": "1.01355e-05", "gnorm": "0.076", "clip": "0.000", "oom": "0.000", "loss_scale": "0.125", "wall": "705944", "train_wall": "777317"}
+{"epoch": 36, "train_loss": "3.083", "train_nll_loss": "1.313", "train_ppl": "2.48", "train_wps": "60096", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "74726", "train_lr": "9.85734e-06", "train_gnorm": "0.076", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.125", "train_wall": "706740", "train_train_wall": "778099"}
+{"epoch": 36, "valid_loss": "3.083", "valid_nll_loss": "1.291", "valid_ppl": "2.45", "valid_num_updates": "74726", "valid_best_loss": "3.08273"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint36.pt (epoch 36 @ 74726 updates) (writing took 29.91942572593689 seconds)
+{"epoch": 37, "update": 36.482, "loss": "3.081", "nll_loss": "1.312", "ppl": "2.48", "wps": "59991", "ups": "0", "wpb": "639644.247", "bsz": "17203.342", "num_updates": "75727", "lr": "6.51526e-06", "gnorm": "0.075", "clip": "0.000", "oom": "0.000", "loss_scale": "0.125", "wall": "717502", "train_wall": "788580"}
+{"epoch": 37, "update": 36.963, "loss": "3.081", "nll_loss": "1.312", "ppl": "2.48", "wps": "60013", "ups": "0", "wpb": "639629.276", "bsz": "17226.771", "num_updates": "76727", "lr": "3.86869e-06", "gnorm": "0.075", "clip": "0.000", "oom": "0.000", "loss_scale": "0.125", "wall": "728156", "train_wall": "799041"}
+{"epoch": 37, "train_loss": "3.081", "train_nll_loss": "1.312", "train_ppl": "2.48", "train_wps": "60017", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "76802", "train_lr": "3.69825e-06", "train_gnorm": "0.075", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.125", "train_wall": "728953", "train_train_wall": "799823"}
+{"epoch": 37, "valid_loss": "3.082", "valid_nll_loss": "1.291", "valid_ppl": "2.45", "valid_num_updates": "76802", "valid_best_loss": "3.08243"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint37.pt (epoch 37 @ 76802 updates) (writing took 29.69242215156555 seconds)
+{"epoch": 38, "update": 37.482, "loss": "3.080", "nll_loss": "1.311", "ppl": "2.48", "wps": "59981", "ups": "0", "wpb": "639584.519", "bsz": "17259.288", "num_updates": "77803", "lr": "1.79976e-06", "gnorm": "0.075", "clip": "0.000", "oom": "0.000", "loss_scale": "0.125", "wall": "739716", "train_wall": "810302"}
+{"epoch": 38, "update": 37.963, "loss": "3.080", "nll_loss": "1.311", "ppl": "2.48", "wps": "59974", "ups": "0", "wpb": "639617.840", "bsz": "17226.025", "num_updates": "78803", "lr": "6.04851e-07", "gnorm": "0.074", "clip": "0.000", "oom": "0.000", "loss_scale": "0.125", "wall": "750382", "train_wall": "820777"}
+{"epoch": 38, "train_loss": "3.080", "train_nll_loss": "1.311", "train_ppl": "2.48", "train_wps": "59971", "train_ups": "0", "train_wpb": "639605.658", "train_bsz": "17226.678", "train_num_updates": "78878", "train_lr": "5.43582e-07", "train_gnorm": "0.074", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.125", "train_wall": "751183", "train_train_wall": "821563"}
+{"epoch": 38, "valid_loss": "3.082", "valid_nll_loss": "1.291", "valid_ppl": "2.45", "valid_num_updates": "78878", "valid_best_loss": "3.08239"}
+| saved checkpoint checkpoint/enfr_transformer_fp_1023_cmba_km_layers12_1280_76_wide315_nopad_gate_fp/checkpoint38.pt (epoch 38 @ 78878 updates) (writing took 29.981377840042114 seconds)
+{"epoch": 39, "update": 38.482, "loss": "3.080", "nll_loss": "1.310", "ppl": "2.48", "wps": "60319", "ups": "0", "wpb": "639484.200", "bsz": "17212.402", "num_updates": "79879", "lr": "1.0516e-07", "gnorm": "0.074", "clip": "0.000", "oom": "0.000", "loss_scale": "0.125", "wall": "761885", "train_wall": "831986"}
+| WARNING: overflow detected, setting loss scale to: 0.0625
+{"epoch": 39, "update": 38.963, "loss": "3.117", "nll_loss": "1.351", "ppl": "2.55", "wps": "60501", "ups": "0", "wpb": "639608.465", "bsz": "17221.686", "num_updates": "80878", "lr": "0.000699728", "gnorm": "0.114", "clip": "0.000", "oom": "0.000", "loss_scale": "0.062", "wall": "772416", "train_wall": "842330"}
+{"epoch": 39, "train_loss": "3.120", "train_nll_loss": "1.353", "train_ppl": "2.56", "train_wps": "60501", "train_ups": "0", "train_wpb": "639603.610", "train_bsz": "17226.598", "train_num_updates": "80953", "train_lr": "0.00069968", "train_gnorm": "0.115", "train_clip": "0.000", "train_oom": "0.000", "train_loss_scale": "0.062", "train_wall": "773209", "train_train_wall": "843108"}
+{"epoch": 39, "valid_loss": "3.145", "valid_nll_loss": "1.360", "valid_ppl": "2.57", "valid_num_updates": "80953", "valid_best_loss": "3.08239"}
