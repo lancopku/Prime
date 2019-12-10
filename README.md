@@ -1,9 +1,13 @@
+# News
+
+12/10 We have changed the model name from MUSE(parallel **MU**lti-**S**cale att**E**ntion) to PRIME(**P**a**R**allel **I**ntersecte **M**ulti-scale Att**E**ntion)
+
 # Introduction
 
 
 **Relevent links:**
  - [Arxiv pdf](https://arxiv.org/abs/1911.09483): https://arxiv.org/abs/1911.09483
- - [Pre-trained models as well as instructions for training](examples/parallel_multi-scale_attention(MUSE)/README.md): examples/parallel_multi-scale_attention(MUSE)/README.md
+ - [Pre-trained models as well as instructions for training](examples/parallel_intersected_multi-scale_attention(Prime)/README.md): examples/parallel_intersected_multi-scale_attention(Prime)/README.md
  - [Reddit post link](https://www.reddit.com/r/MachineLearning/comments/e13qhb/r_a_simple_module_consistently_outperforms/)
 
 **About the paper:**
@@ -41,7 +45,7 @@ Results:
 
 **Installing from source**
 
-To install MUSE from source and develop locally:
+To install from source and develop locally:
 ```
 pip install --editable . --user
 ```
