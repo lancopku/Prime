@@ -1,6 +1,6 @@
 # News
 
-12/10 We have changed the model name from MUSE(parallel **MU**lti-**S**cale att**E**ntion) to PRIME(**P**a**R**allel **I**ntersecte **M**ulti-scale Att**E**ntion)
+12/10 We have changed the model name from MUSE(parallel **MU**lti-**S**cale att**E**ntion) to PRIME(**P**a**R**allel **I**ntersected **M**ulti-scale Att**E**ntion)
 
 # Introduction
 
