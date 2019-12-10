@@ -2,9 +2,7 @@
 
 
 **Relevent links:**
- - [Arxiv pdf](https://arxiv.org/abs/1911.09483): https://arxiv.org/abs/1911.09483
- - [Pre-trained models as well as instructions for training](examples/parallel_multi-scale_attention(MUSE)/README.md): examples/parallel_multi-scale_attention(MUSE)/README.md
- - [Reddit post link](https://www.reddit.com/r/MachineLearning/comments/e13qhb/r_a_simple_module_consistently_outperforms/)
+ - [Pre-trained models as well as instructions for training of Prime](examples/parallel_multi-scale_attention/README.md): examples/parallel_intersected_multi-scale_attention/README.md
 
 **About the paper:**
 
@@ -23,9 +21,8 @@ Key features:
   - Parallel learn sequence representations and thus have potential for acceleration.
 
 Results:
-1. Better than previous models on large NMT datasets; can scale to small datasets and base model setting. [Link](https://disk.pku.edu.cn:443/link/E53D94989506EE3E0AD2B9370C713E92)
-2. The shared projection is key to combine conv and self-attn; generate better long sequences;potential for acceleration. [Link](https://disk.pku.edu.cn:443/link/E53D94989506EE3E0AD2B9370C713E92
-)
+1. Better than previous models on large NMT datasets; can scale to small datasets and base model setting. [Link](https://drive.google.com/open?id=1kIw3-kzi1csY3lgxpvQHVa1xSoS-83_1)
+2. The shared projection is key to combine conv and self-attn; generate better long sequences; potential for acceleration. [Link](https://drive.google.com/open?id=1Qd1toAR6e5olV70s5U2DTcmxIyDadt2G)
 
 | Task | size  | test (BLEU) |
 | ---------- | ---:| ----:|
@@ -41,7 +38,7 @@ Results:
 
 **Installing from source**
 
-To install MUSE from source and develop locally:
+To install from source and develop locally:
 ```
 pip install --editable . --user
 ```
@@ -49,7 +46,7 @@ pip install --editable . --user
 <!--# Pre-trained models and examples-->
 
 We provide pre-trained models and detailed example training and
-evaluation in [examples/parallel_multi-scale_attention(MUSE)/README.md](examples/parallel_multi-scale_attention(MUSE)/README.md).
+evaluation in [examples/parallel_multi-scale_attention/README.md](examples/parallel_multi-scale_attention/README.md).
 
 
 
@@ -58,18 +55,6 @@ evaluation in [examples/parallel_multi-scale_attention(MUSE)/README.md](examples
 <!--The license applies to the pre-trained models as well.-->
 <!--We also provide an additional patent grant.-->
 
-# Citation
-
-Please cite as:
-
-```bibtex
-@article{zhao2019muse,
-  title={MUSE: Parallel Multi-Scale Attention for Sequence to Sequence Learning},
-  author={Zhao, Guangxiang and Sun, Xu and Xu, Jingjing and Zhang, Zhiyuan and Luo, Liangchen},
-  journal={arXiv preprint arXiv:1911.09483},
-  year={2019}
-}
-```
 
 # Notes
 The code is based on fairseq-0.6.2,
