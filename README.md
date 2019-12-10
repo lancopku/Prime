@@ -18,7 +18,7 @@ We ask three questions:
 We find that there are shortcomings in stand-alone self-attention, and present a new module that maps the input to the hidden space and performs the three operations of self-attention, convolution and nonlinearity in parallel, simply stacking this module outperforms all previous models including Transformer (Vasvani et al., 2017) on main NMT tasks under standard setting.
 
 Key features:
-  - First successfully combine convolution and self-attention in one module for sequence tasks by the proposed shared projection,
+  - Design a multi-branch schema evolving self attention and first successfully combine convolution and self-attention in one module for sequence tasks by the proposed shared projection,
   - SOTA on three main translation datasets, including WMT14 En-Fr, WMT14 En-De and IWSLT14 De-En,
   - Parallel learn sequence representations and thus have potential for acceleration.
 
