@@ -2,6 +2,9 @@
 
 This page contains pointers to pre-trained models as well as instructions on how to train new models for the paper
 
+## Preprocess data
+See examples/translation
+
 ## Pretrained models
 
 ### Links of models and datasets
