@@ -166,7 +166,7 @@ python3 generate.py data-bin/wmt16_en_de_bpe32k --path checkpoint/${cur_save}/ch
 ### IWSLT14 De-En
 Training log is Training Log is examples/parallel_intersected_multi-scale_attention(Prime)/logs/iwslt14_de-en_log.txt
 Prediction is examples/parallel_intersected_multi-scale_attention(Prime)/logs/iwslt14_de-en_log.txt
-
+Expected ppl should be 4.6+, and the BLEU score for checkpoint best should be around 35.7
 Training and evaluating Prime on a GPU:
 ```sh
 # Training
@@ -178,8 +178,10 @@ inner_dim=$((2*$dim))
 attn_dynamic_cat=1
 attn_dynamic_type=2
 kernel_size=0
-seed=0
+
 cur_save=${save}
+for seed in 1
+do
 python3 train.py data-bin/iwslt14.tokenized.de-en -a transformer_iwslt_de_en --optimizer adam --lr 0.001 -s de -t en --label-smoothing 0.1 --dropout 0.4 --max-tokens 4000 \
       --min-lr '1e-09' --lr-scheduler inverse_sqrt --weight-decay 0.0001 \
       --criterion label_smoothed_cross_entropy --max-update 20000 \
@@ -193,7 +195,7 @@ python3 train.py data-bin/iwslt14.tokenized.de-en -a transformer_iwslt_de_en --o
 python3 generate.py data-bin/iwslt14.tokenized.de-en --path checkpoint/${cur_save}/checkpoint_best.pt --batch-size 128 --beam 5 --remove-bpe > results/${cur_save}_checkpoint_best.txt
 python3 average_checkpoints.py --inputs checkpoint/${cur_save}  --num-epoch-checkpoints 10 --output checkpoint/${cur_save}/avg_final.pt
 python3 generate.py data-bin/iwslt14.tokenized.de-en --path checkpoint/${cur_save}/avg_final.pt --batch-size 128 --beam 5 --remove-bpe > results/${cur_save}_avg_final.txt
-
+done
 ```
 
 Training and evaluating Prime-simple on a GPU:
