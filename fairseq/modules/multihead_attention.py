@@ -122,26 +122,16 @@ class MultiheadAttention820(nn.Module):
                 nn.init.xavier_uniform_(self.k_proj_weight)
                 nn.init.xavier_uniform_(self.v_proj_weight)
                 nn.init.xavier_uniform_(self.q_proj_weight)
-        elif self.init_method == 'xi':
-            gain = (self.layer_id+1)**(-0.5)
-            if self.qkv_same_dim:
-                nn.init.xavier_uniform_(self.in_proj_weight, gain=gain)
-            else:
-                nn.init.xavier_uniform_(self.k_proj_weight, gain=gain)
-                nn.init.xavier_uniform_(self.v_proj_weight, gain=gain)
-                nn.init.xavier_uniform_(self.q_proj_weight, gain=gain)
         else:
+            # this init is the same as nn.Linear
             if self.qkv_same_dim:
-                nn.init.kaiming_uniform_(self.in_proj_weight)
+                nn.init.kaiming_uniform_(self.in_proj_weight, a=math.sqrt(5))
             else:
-                nn.init.kaiming_uniform_(self.k_proj_weight)
-                nn.init.kaiming_uniform_(self.v_proj_weight)
-                nn.init.kaiming_uniform_(self.q_proj_weight)
+                nn.init.kaiming_uniform_(self.k_proj_weight, a=math.sqrt(5))
+                nn.init.kaiming_uniform_(self.v_proj_weight, a=math.sqrt(5))
+                nn.init.kaiming_uniform_(self.q_proj_weight, a=math.sqrt(5))
         if self.init_method == 'xavier':
             nn.init.xavier_uniform_(self.out_proj.weight)
-        elif self.init_method == 'xi':
-            gain = (self.layer_id + 1) ** (-0.5)
-            nn.init.xavier_uniform_(self.out_proj.weight, gain=gain)
         else:
             nn.init.kaiming_uniform_(self.out_proj.weight, a=1)
         if self.in_proj_bias is not None:
