@@ -40,6 +40,7 @@ Please follow the instructions in [`examples/translation/README.md`](../translat
 ### Training and evaluation options:
 For best BLEU results, lenpen, beam size  and checkpoints to average may need to be manually tuned.
 ### WMT14 En-Fr
+Training Log is examples/parallel_intersected_multi-scale_attention(Prime)/logs/enfr_muse.txt
 Training and evaluating Prime on WMT16 En-Fr using cosine scheduler on one machine with 8 RTX 2080ti GPUs(11GB):
 ```sh
 # Training
@@ -163,6 +164,9 @@ python3 generate.py data-bin/wmt16_en_de_bpe32k --path checkpoint/${cur_save}/ch
 
 
 ### IWSLT14 De-En
+Training log is Training Log is examples/parallel_intersected_multi-scale_attention(Prime)/logs/iwslt14_de-en_log.txt
+Prediction is examples/parallel_intersected_multi-scale_attention(Prime)/logs/iwslt14_de-en_log.txt
+
 Training and evaluating Prime on a GPU:
 ```sh
 # Training
@@ -181,12 +185,15 @@ python3 train.py data-bin/iwslt14.tokenized.de-en -a transformer_iwslt_de_en --o
       --criterion label_smoothed_cross_entropy --max-update 20000 \
       --warmup-updates 4000 --warmup-init-lr '1e-07'  --update-freq 4 --keep-last-epochs 30 \
       --adam-betas '(0.9, 0.98)' --save-dir checkpoint/${cur_save}  \
-      --attn_dynamic_type ${attn_dynamic_type} --kernel_size ${kernel_size} --attn_dynamic_cat ${attn_dynamic_cat}   --attn_wide_kernels [3,15] --fp16 \
+      --attn_dynamic_type ${attn_dynamic_type} --kernel_size ${kernel_size} --attn_dynamic_cat ${attn_dynamic_cat}   --attn_wide_kernels [3,15] --fp16  --dynamic_gate 1\
       --combine 1  --encoder-layers  ${blocks} --decoder-layers ${blocks}  \
       --encoder-embed-dim ${dim} --encoder-ffn-embed-dim ${inner_dim} --decoder-embed-dim ${dim} --decoder-ffn-embed-dim ${inner_dim} --seed ${seed} \
       --log-format json --tensorboard-logdir checkpoint/${cur_save}  2>&1 | tee checkpoint/${cur_save}.txt
 # Evaluation
 python3 generate.py data-bin/iwslt14.tokenized.de-en --path checkpoint/${cur_save}/checkpoint_best.pt --batch-size 128 --beam 5 --remove-bpe > results/${cur_save}_checkpoint_best.txt
+python3 average_checkpoints.py --inputs checkpoint/${cur_save}  --num-epoch-checkpoints 10 --output checkpoint/${cur_save}/avg_final.pt
+python3 generate.py data-bin/iwslt14.tokenized.de-en --path checkpoint/${cur_save}/avg_final.pt --batch-size 128 --beam 5 --remove-bpe > results/${cur_save}_avg_final.txt
+
 ```
 
 Training and evaluating Prime-simple on a GPU:
@@ -208,6 +215,8 @@ python3 train.py data-bin/iwslt14.tokenized.de-en -a transformer_iwslt_de_en --o
       --log-format json --tensorboard-logdir checkpoint/${cur_save}  2>&1 | tee checkpoint/${cur_save}.txt
 # Evaluation
 python3 generate.py data-bin/iwslt14.tokenized.de-en --path checkpoint/${cur_save}/checkpoint_best.pt --batch-size 128 --beam 5 --remove-bpe > results/${cur_save}_checkpoint_best.txt
+python3 average_checkpoints.py --inputs checkpoint/${cur_save}  --num-epoch-checkpoints 10 --output checkpoint/${cur_save}/avg_final.pt
+python3 generate.py data-bin/iwslt14.tokenized.de-en --path checkpoint/${cur_save}/avg_final.pt --batch-size 128 --beam 5 --remove-bpe > results/${cur_save}_avg_final.txt
 ```
 ### Inference Speed for simple  module on IWSLT de-en  with single RTX TITAN
 ```sh
@@ -229,6 +238,7 @@ do
      --encoder-layers  ${layers} --decoder-layers ${layers} \
      --encoder-embed-dim ${dim} --encoder-ffn-embed-dim ${inner_dim} --decoder-embed-dim ${dim} --decoder-ffn-embed-dim ${inner_dim} \
      --log-format json --tensorboard-logdir checkpoint/${cur_save}  2>&1 | tee checkpoint/${cur_save}.txt
+    python3 generate.py data-bin/iwslt14.tokenized.de-en --path checkpoint/${cur_save}/checkpoint_best.pt --batch-size 128 --beam 5 --remove-bpe > results/${cur_save}_checkpoint_best.txt
     python3 average_checkpoints.py --inputs checkpoint/$cur_save  --num-epoch-checkpoints 10 --output checkpoint/$cur_save/avg_.pt
     python3 generate.py data-bin/iwslt14.tokenized.de-en --path checkpoint/$cur_save/avg_${i}.pt --batch-size 1 --beam 5 --remove-bpe --quiet  > results/${results_name}/${cur_save}_test.txt
 done

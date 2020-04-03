@@ -401,17 +401,6 @@ class MultiheadAttention820(nn.Module):
             buffer,
         )
 
-# def clip_init(tensor, k):
-#     flat_tensor = tensor.view(-1)
-#     lowbound, _ = torch.kthvalue(flat_tensor, k)
-#     low_mask = torch.lt(tensor, lowbound)
-#     ne_upbound, _ = torch.kthvalue(torch.neg(flat_tensor), k)
-#     upbound = torch.neg(ne_upbound)
-#     upmask = torch.gt(tensor, upbound)
-#     tensor = tensor.masked_fill(low_mask, lowbound)
-#     tensor =tensor.masked_fill(upmask, upbound)
-#     return nn.Parameter(tensor)
-
 
 class MultiheadAttention(nn.Module):
     """Multi-headed attention.

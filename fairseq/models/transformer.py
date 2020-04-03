@@ -185,9 +185,11 @@ class TransformerModel(FairseqEncoderDecoderModel):
                 tgt_dict, args.decoder_embed_dim, args.decoder_embed_path
             )
         if args.combine:
+            # parallel sequence representation learning
             encoder = TransformerCombineEncoder(args, src_dict, encoder_embed_tokens)
             decoder = TransformerCombineDecoder(args, tgt_dict, decoder_embed_tokens)
         elif args.bm:
+            # means bigger matrix, code for acceleration
             encoder = TransformerBMEncoder(args, src_dict, encoder_embed_tokens)
             decoder = TransformerBMDecoder(args, tgt_dict, decoder_embed_tokens)
         else:
