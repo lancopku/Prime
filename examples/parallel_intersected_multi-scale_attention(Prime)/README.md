@@ -12,7 +12,7 @@ We  will provide pre-trained models for test.
 
 Description | Dataset | Model | Test set(s)
 ---|---|---|---
-Prime  | [IWSLT14 German-English](https://wit3.fbk.eu/archive/2014-01/texts/de/en/de-en.tgz) | - | IWSLT14 test: <br> [download (.tar.bz2)](https://dl.fbaipublicfiles.com/fairseq/data/iwslt14.de-en.test.tar.bz2)
+Prime  | [IWSLT14 German-English](https://wit3.fbk.eu/archive/2014-01/texts/de/en/de-en.tgz) | deen35.7-[prime_checkpoint70.pt](https://disk.pku.edu.cn:443/link/74331554291CC2665E3A39CADCDA6145) <br> deen36.2-[prime_avg70.pt](https://disk.pku.edu.cn:443/link/8D17376C68EFB167F8C309F0DF72910D) | IWSLT14 test: <br> [download (.tar.bz2)](https://dl.fbaipublicfiles.com/fairseq/data/iwslt14.de-en.test.tar.bz2)
 Prime| [WMT16 English-German](https://drive.google.com/uc?export=download&id=0B_bZck-ksdkpM25jRUN2X2UxMm8) | [ende_prime_avg.pt](https://drive.google.com/open?id=1DoSYhBfAw07QStFj62uiDCDJKatBsBBc) | newstest2014 (shared vocab): <br> [download (.tar.bz2)](https://dl.fbaipublicfiles.com/fairseq/data/wmt16.en-de.joined-dict.newstest2014.tar.bz2)
 Prime| [WMT14 English-French](http://statmt.org/wmt14/translation-task.html#Download) | [enfr_prime_single_check.pt](https://drive.google.com/open?id=11BazzWdcSWyUtXXy1p_vHrhPowgd12nl) | newstest2014: <br> [download (.tar.bz2)](https://dl.fbaipublicfiles.com/fairseq/data/wmt14.en-fr.joined-dict.newstest2014.tar.bz2)
 
@@ -29,9 +29,16 @@ python3 generate.py data-bin/wmt14_en_fr --path checkpoint/enfr_prime_single_che
 #### Evaluate  En-De  on the averaged checkpoint of the  Prime
 ```sh
 export CUDA_VISIBLE_DEVICES=0
-python3 generate.py data-bin/wmt16_en_de_bpe32k --path checkpoint/ende_prime_avg.pt --batch-size 128 --beam 4 --remove-bpe --lenpen 0.6 --gen-subset test --quiet > results/ende_prime_avg_test.txt
+python3 generate.py data-bin/wmt16_en_de_bpe32k --path checkpoint/prime_avg70.pt --batch-size 128 --beam 4 --remove-bpe --lenpen 0.6 --gen-subset test --quiet > results/ende_prime_avg_test.txt
 ```
-
+#### Evaluate  IWSLT De-En on pretrained models(at 70 epoch, near 20k updates)  
+```sh
+export CUDA_VISIBLE_DEVICES=0
+# expect 35.7
+python3 generate.py data-bin/iwslt14.tokenized.de-en --path checkpoint/prime_checkpoint70.pt --batch-size 128 --beam 5 --remove-bpe --gen-subset test --quiet > results/iwslt_deen_prime_checkpoint70_test.txt
+# expect 36.2
+python3 generate.py data-bin/iwslt14.tokenized.de-en --path checkpoint/ende_prime_avg.pt --batch-size 128 --beam 5 --remove-bpe --gen-subset test --quiet > results/iwslt_deen_prime_avg70_test.txt
+```
 ## Train  and evaluation
 ### Preprocessing the training datasets
 
