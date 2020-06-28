@@ -42,8 +42,8 @@ Results:
 * [PyTorch](http://pytorch.org/) version >= 1.0.0
 * Python version >= 3.6
 * For training new models, you'll also need an NVIDIA GPU and [NCCL](https://github.com/NVIDIA/nccl)
-* torch==1.3.1
-* cuda==10.0
+* torch==1.3.1 with cuda==10.0
+
 **Installing from source**
 
 To install from source and develop locally:
