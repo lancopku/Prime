@@ -27,8 +27,8 @@ Key features:
   - Parallel learn sequence representations and thus have potential for acceleration.
 
 Results:
-1. Better than previous models on large NMT datasets; can scale to small datasets and base model setting. [Link](https://disk.pku.edu.cn:443/link/E53D94989506EE3E0AD2B9370C713E92)
-2. The shared projection is key to combine conv and self-attn; generate better long sequences;potential for acceleration. [Link](https://disk.pku.edu.cn:443/link/E53D94989506EE3E0AD2B9370C713E92
+1. Better than previous models on large NMT datasets; can scale to small datasets and base model setting. 
+2. The shared projection is key to combine conv and self-attn; generate better long sequences;potential for acceleration. 
 )
 
 | Task | size  | test (BLEU) |
