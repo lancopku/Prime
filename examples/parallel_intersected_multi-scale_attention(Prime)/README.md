@@ -3,7 +3,8 @@
 This page contains pointers to pre-trained models as well as instructions on how to train new models for the paper
 
 ## Preprocess data
-See examples/translation
+WMT En-De : See the "Training a new model on WMT'16 En-De" setion in examples/scaling_nmt
+IWSLT De-En & WMT En-Fr: See the examples/translation
 
 ## Pretrained models
 
