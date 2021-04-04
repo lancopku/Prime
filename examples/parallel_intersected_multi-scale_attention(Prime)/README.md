@@ -249,7 +249,7 @@ do
      --encoder-embed-dim ${dim} --encoder-ffn-embed-dim ${inner_dim} --decoder-embed-dim ${dim} --decoder-ffn-embed-dim ${inner_dim} \
      --log-format json --tensorboard-logdir checkpoint/${cur_save}  2>&1 | tee checkpoint/${cur_save}.txt
     python3 generate.py data-bin/iwslt14.tokenized.de-en --path checkpoint/${cur_save}/checkpoint_best.pt --batch-size 128 --beam 5 --remove-bpe > results/${cur_save}_checkpoint_best.txt
-    python3 average_checkpoints.py --inputs checkpoint/$cur_save  --num-epoch-checkpoints 10 --output checkpoint/$cur_save/avg_.pt
-    python3 generate.py data-bin/iwslt14.tokenized.de-en --path checkpoint/$cur_save/avg_${i}.pt --batch-size 1 --beam 5 --remove-bpe --quiet  > results/${results_name}/${cur_save}_test.txt
+    python3 average_checkpoints.py --inputs checkpoint/$cur_save  --num-epoch-checkpoints 10 --output checkpoint/$cur_save/avg_final.pt
+    python3 generate.py data-bin/iwslt14.tokenized.de-en --path checkpoint/$cur_save/avg_final.pt --batch-size 1 --beam 5 --remove-bpe --quiet  > results/${results_name}/${cur_save}_test.txt
 done
 ```
