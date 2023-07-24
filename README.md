@@ -4,6 +4,10 @@
 
 # Introduction
 
+**Core Code:**
+ - Code for parallel representation learning: [fairseq\models\combine_transformer.py](fairseq\models\combine_transformer.py)
+ - Code for combining convolution and self-attention: [fairseq\modules\multihead_attention.py](fairseq\modules\multihead_attention.py)
+ - Code for acceleration, bm means big matrix: [fairseq\models\transformer_bm.py](fairseq\models\transformer_bm.py)
 
 **Relevent links:**
  - [Arxiv pdf](https://arxiv.org/abs/1911.09483): https://arxiv.org/abs/1911.09483
@@ -77,5 +81,4 @@ Please cite as:
 ```
 
 # Notes
-The code is based on fairseq-0.6.2,
-the main code can be seen in fairseq\models\combine_transformer.py(code for parallel representation learning) and fairseq\models\transformer_bm.py(means bigger matrix, code for acceleration), fairseq\modules\multihead_attention.py(code for combining convolution and self-attention)
+The code is based on fairseq-0.6.2
