@@ -12,7 +12,7 @@ from fairseq.models import (
 from fairseq.modules import (
     AdaptiveSoftmax,
     LayerNorm,
-    MultiheadAttention820,
+    ParallelMultiheadAttention,
     Linear,
     PositionalEmbedding,
     SinusoidalPositionalEmbedding,
@@ -152,7 +152,7 @@ class TransformerCombineEncoderLayer(nn.Module):
     def __init__(self, layer_id, args):
         super().__init__()
         self.embed_dim = args.encoder_embed_dim
-        self.self_attn = MultiheadAttention820(
+        self.self_attn = ParallelMultiheadAttention(
                     self.embed_dim, args.encoder_attention_heads, layer_id=layer_id, args=args,
                     dropout=args.attention_dropout, cur_attn_type='es'
                 )
@@ -443,7 +443,7 @@ class TransformerCombineDecoderLayer(nn.Module):
     def __init__(self, layer_id, args, no_encoder_attn=False, add_bias_kv=False, add_zero_attn=False):
         super().__init__()
         self.embed_dim = args.decoder_embed_dim
-        self.self_attn = MultiheadAttention820(
+        self.self_attn = ParallelMultiheadAttention(
             embed_dim=self.embed_dim,
             num_heads=args.decoder_attention_heads,
             layer_id=layer_id,
@@ -473,7 +473,7 @@ class TransformerCombineDecoderLayer(nn.Module):
             self.encoder_attn = None
             self.encoder_attn_layer_norm = None
         else:
-            self.encoder_attn = MultiheadAttention820(
+            self.encoder_attn = ParallelMultiheadAttention(
                 self.embed_dim, args.decoder_attention_heads,
                 layer_id=layer_id,
                 args=args,

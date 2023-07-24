@@ -22,7 +22,7 @@ from .lightweight_convolution import LightweightConv1dTBC
 from .linearized_convolution import LinearizedConvolution
 from .logsumexp_moe import LogSumExpMoE
 from .mean_pool_gating_network import MeanPoolGatingNetwork
-from .multihead_attention import MultiheadAttention,MultiheadAttention820
+from .multihead_attention import MultiheadAttention,ParallelMultiheadAttention
 from .linear import Linear
 # from .multihead_attention_xt import MultiheadAttentionV
 from .positional_embedding import PositionalEmbedding
@@ -52,7 +52,7 @@ __all__ = [
     'LogSumExpMoE',
     'MeanPoolGatingNetwork',
     'MultiheadAttention',
-    'MultiheadAttention820',
+    'ParallelMultiheadAttention',
     'Linear',
     # 'MultiheadAttentionV',
     'PositionalEmbedding',

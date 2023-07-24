@@ -24,7 +24,7 @@ TransformerModel(
     (embed_positions): SinusoidalPositionalEmbedding()
     (layers): ModuleList(
       (0): TransformerCombineEncoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -42,7 +42,7 @@ TransformerModel(
         (fc2): Linear(in_features=3072, out_features=768, bias=True)
       )
       (1): TransformerCombineEncoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -60,7 +60,7 @@ TransformerModel(
         (fc2): Linear(in_features=3072, out_features=768, bias=True)
       )
       (2): TransformerCombineEncoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -78,7 +78,7 @@ TransformerModel(
         (fc2): Linear(in_features=3072, out_features=768, bias=True)
       )
       (3): TransformerCombineEncoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -96,7 +96,7 @@ TransformerModel(
         (fc2): Linear(in_features=3072, out_features=768, bias=True)
       )
       (4): TransformerCombineEncoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -114,7 +114,7 @@ TransformerModel(
         (fc2): Linear(in_features=3072, out_features=768, bias=True)
       )
       (5): TransformerCombineEncoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -132,7 +132,7 @@ TransformerModel(
         (fc2): Linear(in_features=3072, out_features=768, bias=True)
       )
       (6): TransformerCombineEncoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -150,7 +150,7 @@ TransformerModel(
         (fc2): Linear(in_features=3072, out_features=768, bias=True)
       )
       (7): TransformerCombineEncoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -168,7 +168,7 @@ TransformerModel(
         (fc2): Linear(in_features=3072, out_features=768, bias=True)
       )
       (8): TransformerCombineEncoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -186,7 +186,7 @@ TransformerModel(
         (fc2): Linear(in_features=3072, out_features=768, bias=True)
       )
       (9): TransformerCombineEncoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -204,7 +204,7 @@ TransformerModel(
         (fc2): Linear(in_features=3072, out_features=768, bias=True)
       )
       (10): TransformerCombineEncoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -222,7 +222,7 @@ TransformerModel(
         (fc2): Linear(in_features=3072, out_features=768, bias=True)
       )
       (11): TransformerCombineEncoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -246,7 +246,7 @@ TransformerModel(
     (embed_positions): SinusoidalPositionalEmbedding()
     (layers): ModuleList(
       (0): TransformerCombineDecoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -260,7 +260,7 @@ TransformerModel(
           )
         )
         (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
-        (encoder_attn): MultiheadAttention820(
+        (encoder_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=768, out_features=768, bias=True)
           (dynamics): ModuleList()
         )
@@ -269,7 +269,7 @@ TransformerModel(
         (fc2): Linear(in_features=3072, out_features=768, bias=True)
       )
       (1): TransformerCombineDecoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -283,7 +283,7 @@ TransformerModel(
           )
         )
         (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
-        (encoder_attn): MultiheadAttention820(
+        (encoder_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=768, out_features=768, bias=True)
           (dynamics): ModuleList()
         )
@@ -292,7 +292,7 @@ TransformerModel(
         (fc2): Linear(in_features=3072, out_features=768, bias=True)
       )
       (2): TransformerCombineDecoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -306,7 +306,7 @@ TransformerModel(
           )
         )
         (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
-        (encoder_attn): MultiheadAttention820(
+        (encoder_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=768, out_features=768, bias=True)
           (dynamics): ModuleList()
         )
@@ -315,7 +315,7 @@ TransformerModel(
         (fc2): Linear(in_features=3072, out_features=768, bias=True)
       )
       (3): TransformerCombineDecoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -329,7 +329,7 @@ TransformerModel(
           )
         )
         (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
-        (encoder_attn): MultiheadAttention820(
+        (encoder_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=768, out_features=768, bias=True)
           (dynamics): ModuleList()
         )
@@ -338,7 +338,7 @@ TransformerModel(
         (fc2): Linear(in_features=3072, out_features=768, bias=True)
       )
       (4): TransformerCombineDecoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -352,7 +352,7 @@ TransformerModel(
           )
         )
         (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
-        (encoder_attn): MultiheadAttention820(
+        (encoder_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=768, out_features=768, bias=True)
           (dynamics): ModuleList()
         )
@@ -361,7 +361,7 @@ TransformerModel(
         (fc2): Linear(in_features=3072, out_features=768, bias=True)
       )
       (5): TransformerCombineDecoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -375,7 +375,7 @@ TransformerModel(
           )
         )
         (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
-        (encoder_attn): MultiheadAttention820(
+        (encoder_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=768, out_features=768, bias=True)
           (dynamics): ModuleList()
         )
@@ -384,7 +384,7 @@ TransformerModel(
         (fc2): Linear(in_features=3072, out_features=768, bias=True)
       )
       (6): TransformerCombineDecoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -398,7 +398,7 @@ TransformerModel(
           )
         )
         (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
-        (encoder_attn): MultiheadAttention820(
+        (encoder_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=768, out_features=768, bias=True)
           (dynamics): ModuleList()
         )
@@ -407,7 +407,7 @@ TransformerModel(
         (fc2): Linear(in_features=3072, out_features=768, bias=True)
       )
       (7): TransformerCombineDecoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -421,7 +421,7 @@ TransformerModel(
           )
         )
         (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
-        (encoder_attn): MultiheadAttention820(
+        (encoder_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=768, out_features=768, bias=True)
           (dynamics): ModuleList()
         )
@@ -430,7 +430,7 @@ TransformerModel(
         (fc2): Linear(in_features=3072, out_features=768, bias=True)
       )
       (8): TransformerCombineDecoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -444,7 +444,7 @@ TransformerModel(
           )
         )
         (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
-        (encoder_attn): MultiheadAttention820(
+        (encoder_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=768, out_features=768, bias=True)
           (dynamics): ModuleList()
         )
@@ -453,7 +453,7 @@ TransformerModel(
         (fc2): Linear(in_features=3072, out_features=768, bias=True)
       )
       (9): TransformerCombineDecoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -467,7 +467,7 @@ TransformerModel(
           )
         )
         (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
-        (encoder_attn): MultiheadAttention820(
+        (encoder_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=768, out_features=768, bias=True)
           (dynamics): ModuleList()
         )
@@ -476,7 +476,7 @@ TransformerModel(
         (fc2): Linear(in_features=3072, out_features=768, bias=True)
       )
       (10): TransformerCombineDecoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -490,7 +490,7 @@ TransformerModel(
           )
         )
         (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
-        (encoder_attn): MultiheadAttention820(
+        (encoder_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=768, out_features=768, bias=True)
           (dynamics): ModuleList()
         )
@@ -499,7 +499,7 @@ TransformerModel(
         (fc2): Linear(in_features=3072, out_features=768, bias=True)
       )
       (11): TransformerCombineDecoderLayer(
-        (self_attn): MultiheadAttention820(
+        (self_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=1536, out_features=768, bias=True)
           (dynamics): ModuleList(
             (0): DynamicConv1dTBC(
@@ -513,7 +513,7 @@ TransformerModel(
           )
         )
         (self_attn_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
-        (encoder_attn): MultiheadAttention820(
+        (encoder_attn): ParallelMultiheadAttention(
           (out_proj): Linear(in_features=768, out_features=768, bias=True)
           (dynamics): ModuleList()
         )

@@ -23,7 +23,7 @@ from fairseq.modules import (
     AdaptiveSoftmax,
     LayerNorm,
     MultiheadAttention,
-    MultiheadAttention820,
+    ParallelMultiheadAttention,
     Linear,
     PositionalEmbedding,
     SinusoidalPositionalEmbedding,

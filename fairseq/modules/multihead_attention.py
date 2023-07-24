@@ -16,7 +16,7 @@ from .dynamic_convolution import DynamicConv1dTBC
 bmm_fp16_support = tuple(int(x) for x in torch.version.cuda.split('.')) >= (9, 1, 0)
 
 
-class MultiheadAttention820(nn.Module):
+class ParallelMultiheadAttention(nn.Module):
     """Shared Projection
 
     See " Parallel Multi-scale Attention " for more details.
